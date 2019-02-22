@@ -8,20 +8,20 @@ const TopBar = () => {
   return (
     <Topbar>
       <Container>
-        <div className="container-left">
+        <Containerleft>
           <span>TOPICS</span>
           <span>SEARCH</span>
-        </div>
-        <div className="container-center">
+        </Containerleft>
+        <Containercenter>
           <span>GENERAL</span>
           <span>BROWNBAG</span>
           <span>RANDOM</span>
           <span>MUSIC</span>
           <span>ANNOUNCEMENTS</span>
-        </div>
-        <div className="container-right">
+        </Containercenter>
+        <ContainerRight>
           <span>LOG IN</span>
-        </div>
+        </ContainerRight>
       </Container>
     </Topbar>
   );
@@ -46,6 +46,34 @@ const Container = styled.div`
   color: #fff;
   letter-spacing: 1px;
   padding: 0 10px;
+`;
+
+const Containerleft = styled.div`
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+`;
+
+const Containercenter = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex: 3;
+  font-size: 9px;
+`;
+
+const ContainerRight = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+  font-weight: bold;
 `;
 
 export default TopBar;
